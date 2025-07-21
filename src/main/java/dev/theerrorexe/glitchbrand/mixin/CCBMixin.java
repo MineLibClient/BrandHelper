@@ -12,7 +12,7 @@ public class CCBMixin {
 
     @Inject(method = "write(Lnet/minecraft/network/FriendlyByteBuf;)V", at = @At(value = "HEAD"), cancellable = true)
     public void changeClientBrand(FriendlyByteBuf buf, CallbackInfo ci) {
-        buf.writeUtf("Glitchclient");
+        buf.writeUtf("MineLibClient");
         ci.cancel();
     }
 }
